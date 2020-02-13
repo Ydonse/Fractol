@@ -6,7 +6,7 @@
 #    By: ydonse <ydonse@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/09 11:10:30 by ydonse            #+#    #+#              #
-#    Updated: 2019/04/19 11:16:58 by ydonse           ###   ########.fr        #
+#    Updated: 2020/02/13 11:13:21 by ydonse           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ SRC_NAME = main.c actions.c	controls.c images.c colors.c mandelbrot.c zoom.c men
 CPPFLAGS = -I libft/includes/ -I /usr/local/include/ -MMD
 
 LDFLAGS = -L libft/ -lft  -L /usr/local/include/ -lmlx -lpthread
+
+MLX_FLAGS = -I ./minilibx_macos/ ./minilibx_macos/libmlx.a
 
 LDLIBS = -framework OpenGL -framework AppKit
 
@@ -45,7 +47,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	make -C libft/
-	$(CC) $(CFLAGS) $(LDFLAGS) $(LDLIBS) $^ -o $@
+	make -C minilibx_macos
+	$(CC) $(CFLAGS) $(LDFLAGS) $(MLX_FLAGS) $(LDLIBS) $^ -o $@
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c | $(OBJ_PATH)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -I $(HEADER_PATH) -o $@ -c $<
@@ -55,6 +58,7 @@ $(OBJ_PATH):
 
 clean:
 	make clean -C libft/
+	make clean -C minilibx_macos
 	rm -f $(OBJ) $(OBJ:.o=.d)
 	@rmdir $(OBJ_PATH) 2> /dev/null || true
 
