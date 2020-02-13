@@ -1,2 +1,2 @@
 # Fractol
-Fractol is the second project of the graphic course of school 42
+Fractol is the second project of the graphic course at school 42
