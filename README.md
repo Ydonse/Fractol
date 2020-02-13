@@ -4,7 +4,6 @@ Create beautiful fractales.
 ## Description
 This program written in C allows the user to create and manipulate repetitive geometrical figures called fractales. 
 <img src="https://donsefactory.files.wordpress.com/2020/02/fractale_03.gif" width=500 height=500/>
-<img src="https://donsefactory.files.wordpress.com/2020/02/fractale_01.gif" width=500 height=500/>
 
 Features:
 * Infinite zooming(up to computer capabilities) 
