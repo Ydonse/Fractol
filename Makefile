@@ -6,7 +6,7 @@
 #    By: ydonse <ydonse@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/09 11:10:30 by ydonse            #+#    #+#              #
-#    Updated: 2020/02/13 11:25:27 by ydonse           ###   ########.fr        #
+#    Updated: 2020/02/13 11:27:19 by ydonse           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,7 @@ clean:
 
 fclean: clean
 	make fclean -C libft/
+	make fclean -C minilibx_macos/
 	rm -f $(NAME)
 
 re: fclean
