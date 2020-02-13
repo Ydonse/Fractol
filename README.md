@@ -14,7 +14,7 @@ Features:
 
 ## Installation
 ***Only works on MacOS with provided library***<br/>
-Install the library and game by typing: <br/>
+Install the library and program by typing: <br/>
 `make`
 
 OpenGL has to be installed as it is required by the MLX library.
