@@ -6,7 +6,7 @@
 #    By: ydonse <ydonse@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/09 11:10:30 by ydonse            #+#    #+#              #
-#    Updated: 2020/02/13 11:13:21 by ydonse           ###   ########.fr        #
+#    Updated: 2020/02/13 11:25:27 by ydonse           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC_NAME = main.c actions.c	controls.c images.c colors.c mandelbrot.c zoom.c men
 
 CPPFLAGS = -I libft/includes/ -I /usr/local/include/ -MMD
 
-LDFLAGS = -L libft/ -lft  -L /usr/local/include/ -lmlx -lpthread
+LDFLAGS = -L libft/ -lft -lpthread
 
 MLX_FLAGS = -I ./minilibx_macos/ ./minilibx_macos/libmlx.a
 
